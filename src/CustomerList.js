@@ -45,7 +45,7 @@ class CustomerList extends Component {
         <td>{customer.lastname}</td>
         <td>{customer.age}</td>
         <td>{customer.address}</td>
-        <td><a href={customer.copyright}>{customer.copyright}</a></td>
+
         <td>
           <ButtonGroup>
             <Button size="sm" color="primary" tag={Link} to={"/customers/" + customer.id}>Edit</Button>
@@ -60,9 +60,9 @@ class CustomerList extends Component {
         <AppNavbar/>
         <Container fluid>
           <div className="float-right">
-            <Button color="success" tag={Link} to="/customers/new">Add Customer</Button>
+            <Button color="success" tag={Link} to="/customers/new">Add Employee</Button>
           </div>
-          <h3>Customer List</h3>
+          <h3>Employee List</h3>
           <Table className="mt-4">
             <thead>
               <tr>
@@ -70,7 +70,7 @@ class CustomerList extends Component {
                 <th width="20%">Lastname</th>
                 <th width="10%">Age</th>
                 <th>Address</th>
-                <th>Copyrightby</th>
+
                 <th width="10%">Actions</th>
               </tr>
             </thead>
