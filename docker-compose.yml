@@ -26,5 +26,3 @@ services:
       stdin_open: true
       ports:
             - "3000:3000"
-      environment:
-          proxy: http://backend:8080
