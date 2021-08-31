@@ -11,5 +11,5 @@ FROM         node:alpine
 COPY         . /frontend
 WORKDIR      /frontend
 RUN          npm install
-
-CMD ["npm", "run", "start"]
+RUN          npm run build
+CMD          ["npm", "run", "start"]
