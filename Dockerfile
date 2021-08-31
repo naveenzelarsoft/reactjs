@@ -7,9 +7,9 @@
 #CMD          [ "npm", "start"]
 
 
-FROM         node:14.1-alpine
+FROM         node:14.17.5-slim
 COPY         . /frontend
 WORKDIR      /frontend
 RUN          npm install
 RUN          npm run build
-CMD          npm start
+CMD          [ "npm", "start"]
