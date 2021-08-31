@@ -14,10 +14,10 @@ services:
     image: naveen5035/backend:v1
     container_name: backend
     environment:
-      - PGDATABASE= loizenaidb
-      - PGUSER= postgres
-      - PGPASSWORD= 123
-      - PGHOST= localhost
+      POSTGRES_DATABASE: loizenaidb
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 123
+      POSTGRES_HOST: localhost
     ports:
         - "8080:8080"
   frontend:
