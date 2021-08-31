@@ -18,6 +18,8 @@ services:
       host: postgres
     ports:
         - "8080:8080"
+    depends_on:
+          - postgres
   postgres:
         image: postgres:latest
         container_name: postgres
