@@ -9,7 +9,6 @@ services:
         POSTGRES_USER: postgres
         POSTGRES_PASSWORD: 123
         POSTGRES_DB: loizenaidb
-        listen_addresses: '*'
   backend:
     image: naveen5035/backend:v1
     container_name: backend
@@ -17,7 +16,7 @@ services:
       POSTGRES_DATABASE: loizenaidb
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: 123
-      POSTGRES_HOST: postgres
+      POSTGRES_HOST: locahost
     ports:
         - "8080:8080"
   frontend:
