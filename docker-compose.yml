@@ -1,14 +1,11 @@
 version: "3"
 services:
-  postgres:
-      image: postgres:latest
-      container_name: postgres
-      ports:
-          - "5432:5432"
-      environment:
-        POSTGRES_PASSWORD: 123
-        POSTGRES_DB: loizenaidb
-        POSTGRES_USER: postgres
+  frontend:
+        image: naveen5035/frontend:latest
+        container_name: frontend
+        stdin_open: true
+        ports:
+              - "3000:3000"
   backend:
     image: backend:v6
     container_name: backend
@@ -19,9 +16,12 @@ services:
       host: postgres
     ports:
         - "8080:8080"
-  frontend:
-      image: naveen5035/frontend:latest
-      container_name: frontend
-      stdin_open: true
-      ports:
-            - "3000:3000"
+  postgres:
+        image: postgres:latest
+        container_name: postgres
+        ports:
+            - "5432:5432"
+        environment:
+          POSTGRES_PASSWORD: 123
+          POSTGRES_DB: loizenaidb
+          POSTGRES_USER: postgres
