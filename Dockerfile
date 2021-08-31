@@ -7,14 +7,9 @@
 #CMD          [ "npm", "start"]
 
 
-FROM    node:lts-alpine
-WORKDIR /app
-COPY . /app
-ENV PATH /app/node_modules/.bin:$PATH
-RUN CI=true
-RUN yarn
-RUN yarn build
-
-EXPOSE 3000
+FROM         node:alpine
+COPY         . /frontend
+WORKDIR      /frontend
+RUN          npm install
 
 CMD ["npm", "run", "start"]
