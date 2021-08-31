@@ -1,0 +1,19 @@
+version: "3"
+services:
+  frontend:
+    image: naveen5035/frontend:latest
+    container_name: frontend
+    stdin_open: true
+
+  backend:
+    image: naveen5035/backend:v1
+    container_name: backend
+
+  postgres:
+    image: postgres:latest
+    container_name: postgres
+
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 123
+      POSTGRES_DB: loizenaidb
