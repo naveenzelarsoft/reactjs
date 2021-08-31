@@ -11,7 +11,7 @@ FROM    node:16-alpine3.11
 WORKDIR /app
 COPY . /app
 ENV PATH /app/node_modules/.bin:$PATH
-
+RUN CI=true
 RUN yarn
 RUN yarn build
 
