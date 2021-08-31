@@ -7,9 +7,9 @@
 #CMD          [ "npm", "start"]
 
 
-FROM         node:lts-alpine
+FROM         node:alpine
 COPY         . ./frontend
 WORKDIR      /frontend
-RUN          yarn
-RUN          yarn build
+ENV          PATH /frontend/node_modules/.bin:$PATH
+RUN          npm install
 CMD          [ "npm", "start"]
