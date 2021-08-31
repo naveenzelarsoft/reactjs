@@ -4,6 +4,8 @@ services:
         image: naveen5035/frontend:latest
         container_name: frontend
         stdin_open: true
+        environment:
+              - CHOKIDAR_USEPOLLING=true
         ports:
               - "3000:3000"
   backend:
@@ -23,5 +25,5 @@ services:
             - "5432:5432"
         environment:
           POSTGRES_PASSWORD: 123
-          POSTGRES_DB: loizenaidb
           POSTGRES_USER: postgres
+          POSTGRES_DB: loizenaidb
