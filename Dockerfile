@@ -7,7 +7,7 @@
 #CMD          [ "npm", "start"]
 
 
-FROM node:alpine
+FROM node:lts-alpine
 WORKDIR /app
 COPY . /app
 ENV PATH /app/node_modules/.bin:$PATH
