@@ -7,7 +7,7 @@
 #CMD          [ "npm", "start"]
 
 
-FROM         node:14.17.5-slim
+FROM         node:16
 COPY         . /frontend
 WORKDIR      /frontend
 RUN          npm install
