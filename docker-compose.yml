@@ -10,7 +10,7 @@ services:
         POSTGRES_PASSWORD: 123
         POSTGRES_DB: loizenaidb
   backend:
-    image: naveen5035/backend:v1
+    image: backend:v5
     container_name: backend
     environment:
       POSTGRES_DATABASE: loizenaidb
