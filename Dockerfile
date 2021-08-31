@@ -12,4 +12,4 @@ COPY         . ./frontend
 WORKDIR      /frontend
 RUN          yarn
 RUN          yarn build
-
+CMD          [ "npm", "start"]
