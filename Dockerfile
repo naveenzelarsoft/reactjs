@@ -7,9 +7,14 @@
 #CMD          [ "npm", "start"]
 
 
-FROM         node:alpine
-COPY         . ./frontend
-WORKDIR      /frontend
-ENV          PATH /frontend/node_modules/.bin:$PATH
-RUN          npm install
-CMD          [ "npm", "start"]
+FROM node:alpine
+WORKDIR /app
+COPY . /app
+ENV PATH /app/node_modules/.bin:$PATH
+
+RUN yarn
+RUN yarn build
+
+EXPOSE 3000
+
+CMD ["npm", "run", "start"]
