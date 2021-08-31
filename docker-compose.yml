@@ -6,6 +6,8 @@ services:
     stdin_open: true
     ports:
           - "3000:3000"
+    environment:
+        "proxy": "http://localhost:8080"
   backend:
     image: naveen5035/backend:v1
     container_name: backend
