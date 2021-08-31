@@ -8,12 +8,15 @@ services:
       environment:
         POSTGRES_PASSWORD: 123
         POSTGRES_DB: loizenaidb
+        POSTGRES_USER: postgres
   backend:
-    image: naveen5035/backend:v1
+    image: backend:v6
     container_name: backend
     environment:
-      POSTGRES_DATABASE: loizenaidb
-      POSTGRES_PASSWORD: 123
+      database: loizenaidb
+      username: postgres
+      password: 123
+      host: postgres
     ports:
         - "8080:8080"
   frontend:
