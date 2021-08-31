@@ -1,16 +1,16 @@
 version: "3"
 services:
-#  postgres:
-#      image: postgres:latest
-#      container_name: postgres
-#      ports:
-#          - "5432:5432"
-#      environment:
-#        POSTGRES_USER: postgres
-#        POSTGRES_PASSWORD: 123
-#        POSTGRES_DB: loizenaidb
+  postgres:
+      image: postgres:latest
+      container_name: postgres
+      ports:
+          - "5432:5432"
+      environment:
+        POSTGRES_USER: postgres
+        POSTGRES_PASSWORD: 123
+        POSTGRES_DB: loizenaidb
   backend:
-    image: backend:v5
+    image: naveen5035/backend:v1
     container_name: backend
     environment:
       POSTGRES_DATABASE: loizenaidb
