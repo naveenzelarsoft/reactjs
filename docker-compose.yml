@@ -1,33 +1,78 @@
-version: "3"
+#version: "3"
+#services:
+#  frontend:
+#        image: naveen5035/frontend:latest
+#        container_name: frontend
+#        stdin_open: true
+#        environment:
+#              - CHOKIDAR_USEPOLLING=true
+#        ports:
+#              - "3000:3000"
+#        depends_on:
+#              - backend
+#  backend:
+#    image: backend:v2
+#    container_name: backend
+#    environment:
+#      database: loizenaidb
+#      username: postgres
+#      password: 123
+#      host: postgres
+#    ports:
+#        - "8080:8080"
+#    depends_on:
+#          - postgres
+#  postgres:
+#        image: postgres:latest
+#        container_name: postgres
+#        ports:
+#            - "5432:5432"
+#        environment:
+#          POSTGRES_PASSWORD: 123
+#          POSTGRES_USER: postgres
+#          POSTGRES_DB: loizenaidb
+
+
+version: "3.9"
 services:
+
+
   frontend:
-        image: naveen5035/frontend:latest
-        container_name: frontend
-        stdin_open: true
-        environment:
-              - CHOKIDAR_USEPOLLING=true
-        ports:
-              - "3000:3000"
-        depends_on:
-              - backend
+    image: naveen5035/frontend:latest
+    container_name: frontend
+    stdin_open: true
+    ports:
+      - "3000:3000"
+
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+
+    depends_on:
+      - backend
+
   backend:
-    image: backend:v6
+    image: backend:v2
     container_name: backend
+    ports:
+      - "8080:8080"
+
+    depends_on:
+      - postgres
     environment:
       database: loizenaidb
       username: postgres
       password: 123
       host: postgres
-    ports:
-        - "8080:8080"
-    depends_on:
-          - postgres
+
+
+
   postgres:
-        image: postgres:latest
-        container_name: postgres
-        ports:
-            - "5432:5432"
-        environment:
-          POSTGRES_PASSWORD: 123
-          POSTGRES_USER: postgres
-          POSTGRES_DB: loizenaidb
+    image: postgres:latest
+    container_name: postgres
+    ports:
+      - "5432:5432"
+
+    environment:
+      POSTGRES_PASSWORD: 123
+      POSTGRES_USER: postgres
+      POSTGRES_DB: loizenaidb
