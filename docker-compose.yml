@@ -33,7 +33,7 @@
 #          POSTGRES_DB: loizenaidb
 
 
-version: "3.3"
+version: "3.9"
 services:
 
 
