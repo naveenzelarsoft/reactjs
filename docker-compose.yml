@@ -16,7 +16,7 @@ services:
         - PGDATABASE= loizenaidb
         - PGUSER= postgres
         - PGPASSWORD= 12345
-        - PGHOST= ppostgres
+        - PGHOST= postgres
 #      database: loizenaidb
 #      username: postgres
 #      password: 12345
