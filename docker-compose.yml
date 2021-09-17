@@ -10,7 +10,7 @@ services:
             POSTGRES_USER: postgres
             POSTGRES_DB: loizenaidb
   backend:
-    image: backend:v6
+    image: backend:v5
     container_name: backend
     environment:
          PGDATABASE: loizenaidb
