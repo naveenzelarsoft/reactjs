@@ -13,11 +13,15 @@ services:
     image: naveen5035/backend:v2
     container_name: backend
     environment:
-      database: loizenaidb
-      username: postgres
-      password: 12345
-      host: postgres
-      dialect: postgres
+        - PGDATABASE= loizenaidb
+        - PGUSER= postgres
+        - PGPASSWORD= 12345
+        - PGHOST= ppostgres
+#      database: loizenaidb
+#      username: postgres
+#      password: 12345
+#      host: postgres
+#      dialect: postgres
     ports:
         - "8080:8080"
     depends_on:
