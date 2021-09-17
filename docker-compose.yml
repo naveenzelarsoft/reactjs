@@ -6,16 +6,19 @@ services:
           ports:
               - "5432:5432"
           environment:
-            POSTGRES_PASSWORD: 12345
-            POSTGRES_USER: postgres
-            POSTGRES_DB: loizenaidb
+             - PGDATABASE= loizenaidb
+             - PGUSER= postgres
+             - PGPASSWORD= "12345"
+#            POSTGRES_PASSWORD: "12345"
+#            POSTGRES_USER: postgres
+#            POSTGRES_DB: loizenaidb
   backend:
     image: naveen5035/backend:v2
     container_name: backend
     environment:
         - PGDATABASE= loizenaidb
         - PGUSER= postgres
-        - PGPASSWORD= 12345
+        - PGPASSWORD= "12345"
         - PGHOST= postgres
 #      database: loizenaidb
 #      username: postgres
