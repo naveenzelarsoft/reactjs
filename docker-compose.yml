@@ -12,10 +12,10 @@ services:
       image: naveen5035/backend:v2
       container_name: backend
 #      environment:
-  #         PGDATABASE: loizenaidb
-  #         PGUSER: postgres
-  #         PGPASSWORD: 123
-  #         PGHOST: postgres
+#         PGDATABASE: loizenaidb
+#         PGUSER: postgres
+#         PGPASSWORD: 123
+#         PGHOST: postgres
 #          database: loizenaidb
 #          username: postgres
 #          password: 123
