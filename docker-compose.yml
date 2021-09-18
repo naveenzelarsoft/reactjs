@@ -9,7 +9,7 @@ services:
         depends_on:
              - backend
   backend:
-      image: backend:v
+      image: backend:v5
       container_name: backend
       environment:
 #         DB_NAME: loizenaidb
