@@ -17,6 +17,7 @@ services:
 #         PGUSER: postgres
 #         PGPASSWORD: 12345
 #         PGHOST: postgres
+        Sequelize: (env.loizenaidb, env.postgres, env.12345)
         database: loizenaidb
         username: postgres
         password: 12345
