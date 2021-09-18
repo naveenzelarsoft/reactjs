@@ -17,10 +17,10 @@ services:
 #         PGUSER: postgres
 #         PGPASSWORD: 12345
 #         PGHOST: postgres
-        database: loizenaidb
-        username: postgres
-        password: 12345
-        host: postgres
+        env.database: loizenaidb
+        env.username: postgres
+        env.password: 12345
+        env.host: postgres
     ports:
         - "8080:8080"
     depends_on:
