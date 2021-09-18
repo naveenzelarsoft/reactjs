@@ -1,5 +1,30 @@
 version: "3"
 services:
+  frontend:
+        image: naveen5035/frontend:v2
+        container_name: frontend
+        stdin_open: true
+        ports:
+             - "3000:3000"
+        depends_on:
+             - backend
+  backend:
+      image: naveen5035/backend:v2
+      container_name: backend
+      environment:
+  #         PGDATABASE: loizenaidb
+  #         PGUSER: postgres
+  #         PGPASSWORD: 123
+  #         PGHOST: postgres
+          database: loizenaidb
+          username: postgres
+          password: 123
+          host: postgres
+          dialect: postgres
+      ports:
+          - "8080:8080"
+      depends_on:
+            - postgres
   postgres:
           image: postgres:latest
           container_name: postgres
@@ -9,29 +34,5 @@ services:
             POSTGRES_PASSWORD: 123
             POSTGRES_USER: postgres
             POSTGRES_DB: loizenaidb
-  backend:
-    image: naveen5035/backend:v2
-    container_name: backend
-    environment:
-#         PGDATABASE: loizenaidb
-#         PGUSER: postgres
-#         PGPASSWORD: 123
-#         PGHOST: postgres
-        database: loizenaidb
-        username: postgres
-        password: 123
-        host: postgres
-        dialect: postgres
-    ports:
-        - "8080:8080"
-    depends_on:
-          - postgres
 
-  frontend:
-          image: naveen5035/frontend:v2
-          container_name: frontend
-          stdin_open: true
-          ports:
-                - "3000:3000"
-          depends_on:
-                - backend
+
