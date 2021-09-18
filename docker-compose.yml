@@ -16,10 +16,10 @@ services:
 #         DB_USERNAME: postgres
 #         DB_PASSWORD: 12345
 #         DB_HOST: postgres
-          database: loizenaidb
-          username: postgres
-          password: 12345
-          host: postgres
+          env.database: loizenaidb
+          env.username: postgres
+          env.password: 12345
+          env.host: postgres
 #          dialect: postgres
       ports:
           - "8080:8080"
