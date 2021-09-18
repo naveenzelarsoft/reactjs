@@ -20,7 +20,7 @@ services:
           env.username: postgres
           env.password: 12345
           env.host: postgres
-#          dialect: postgres
+          env.dialect: postgres
       ports:
           - "8080:8080"
       depends_on:
