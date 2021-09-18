@@ -17,10 +17,10 @@ services:
 #         PGUSER: postgres
 #         PGPASSWORD: 123
 #         PGHOST: postgres
-#        database: loizenaidb
-#        username: postgres
-#        password: 123
-#        host: postgres
+        database: loizenaidb
+        username: postgres
+        password: 123
+        host: postgres
     ports:
         - "8080:8080"
     depends_on:
