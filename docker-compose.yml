@@ -15,11 +15,11 @@ services:
 #    environment:
 #         PGDATABASE: loizenaidb
 #         PGUSER: postgres
-#         PGPASSWORD: 12345
+#         PGPASSWORD: 123
 #         PGHOST: postgres
 #        database: loizenaidb
 #        username: postgres
-#        password: 12345
+#        password: 123
 #        host: postgres
     ports:
         - "8080:8080"
