@@ -11,11 +11,11 @@ services:
   backend:
       image: backend:v6
       container_name: backend
-      environment:
-         DB_NAME: loizenaidb
-         DB_USERNAME: postgres
-         DB_PASSWORD: 12345
-         DB_HOST: postgres
+#      environment:
+#         DB_NAME: loizenaidb
+#         DB_USERNAME: postgres
+#         DB_PASSWORD: 12345
+#         DB_HOST: postgres
 #          database: loizenaidb
 #          username: postgres
 #          password: 123
