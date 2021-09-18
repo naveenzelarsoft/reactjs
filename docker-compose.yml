@@ -11,16 +11,15 @@ services:
   backend:
       image: backend:v5
       container_name: backend
-      environment:
+#      environment:
 #         DB_NAME: loizenaidb
 #         DB_USERNAME: postgres
 #         DB_PASSWORD: 12345
 #         DB_HOST: postgres
-          env.database: loizenaidb
-          env.username: postgres
-          env.password: 12345
-          env.host: postgres
-          env.dialect: postgres
+#          database: loizenaidb
+#          username: postgres
+#          password: 12345
+#          host: postgres
       ports:
           - "8080:8080"
       depends_on:
