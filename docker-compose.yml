@@ -5,14 +5,14 @@ services:
         container_name: frontend
         stdin_open: true
         environment:
-           process.env.PUBLIC_URL: backend-service
+           process.env.PUBLIC_URL: backend_service
         ports:
              - "3000:3000"
         depends_on:
-             - backend-service
+             - backend_service
   backend:
       image: naveen5035/backend:v2
-      container_name: backend-service
+      container_name: backend_service
 #      environment:
 #         DB_NAME: loizenaidb
 #         DB_USERNAME: postgres
