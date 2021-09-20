@@ -9,7 +9,7 @@ services:
               POSTGRES_PASSWORD: 123
               POSTGRES_USER: postgres
               POSTGRES_DB: loizenaidb
-  backend:
+  backends:
         image: naveen5035/backend:v2
         container_name: backends
   #      environment:
