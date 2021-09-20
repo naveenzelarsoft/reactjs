@@ -28,7 +28,6 @@ services:
         container_name: frontend
         stdin_open: true
         environment:
-           backend_name: backends
-           port: 8080
+           proxy: "http://backends:8080"
         ports:
              - "3000:3000"
