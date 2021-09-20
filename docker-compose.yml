@@ -24,7 +24,7 @@ services:
         ports:
             - "8080:8080"
   frontend:
-        image: naveen5035/frontend:v2
+        image: frontend:v5
         container_name: frontend
         stdin_open: true
         environment:
