@@ -4,13 +4,15 @@ services:
         image: naveen5035/frontend:v2
         container_name: frontend
         stdin_open: true
+        environment:
+           PUBLIC_URL: backend1
         ports:
              - "3000:3000"
         depends_on:
              - backend
   backend:
       image: backend:v5
-      container_name: backend
+      container_name: backend1
 #      environment:
 #         DB_NAME: loizenaidb
 #         DB_USERNAME: postgres
