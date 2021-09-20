@@ -9,9 +9,9 @@ services:
               POSTGRES_PASSWORD: 123
               POSTGRES_USER: postgres
               POSTGRES_DB: loizenaidb
-  backend:
+  backends:
         image: naveen5035/backend:v2
-        container_name: backend
+        container_name: backends
   #      environment:
   #         DB_NAME: loizenaidb
   #         DB_USERNAME: postgres
@@ -28,6 +28,6 @@ services:
         container_name: frontend
         stdin_open: true
         environment:
-           process.env.PUBLIC_URL: backend
+           backend_url: "http://backends:8080"
         ports:
              - "3000:3000"
