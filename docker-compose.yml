@@ -5,7 +5,7 @@ services:
         container_name: frontend
         stdin_open: true
         environment:
-           BACKEND: backend1
+           PUBLIC_URL: backend1
         ports:
              - "3000:3000"
         depends_on:
