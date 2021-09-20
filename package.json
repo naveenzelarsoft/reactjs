@@ -20,7 +20,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "proxy": "http://$backend_name:$port",
+  "$proxy": "http://backend8080",
   "eslintConfig": {
     "extends": "react-app"
   },
