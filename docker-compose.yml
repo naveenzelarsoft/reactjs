@@ -9,7 +9,7 @@ services:
         ports:
              - "3000:3000"
         depends_on:
-             - backend
+             - backend1
   backend:
       image: naveen5035/backend:v2
       container_name: backend1
