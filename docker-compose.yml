@@ -9,9 +9,9 @@ services:
               POSTGRES_PASSWORD: 12345
               POSTGRES_USER: postgres
               POSTGRES_DB: loizenaidb
-  backends:
+  backend:
         image: backend:v5
-        container_name: backends
+        container_name: backend
       environment:
          DATABASE: loizenaidb
          USERNAME: postgres
