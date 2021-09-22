@@ -12,7 +12,7 @@ services:
   backend:
         image: backend:v5
         container_name: backend
-      environment:
+        environment:
          DATABASE: loizenaidb
          USERNAME: postgres
          PASSWORD: 12345
