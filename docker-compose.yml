@@ -6,28 +6,24 @@ services:
             ports:
                 - "5432:5432"
             environment:
-              POSTGRES_PASSWORD: 123
+              POSTGRES_PASSWORD: 12345
               POSTGRES_USER: postgres
               POSTGRES_DB: loizenaidb
   backends:
         image: naveen5035/backend:v2
         container_name: backends
-#      environment:
-#         DB_NAME: loizenaidb
-#         DB_USERNAME: postgres
-#         DB_PASSWORD: 12345
-#         DB_HOST: postgres
-#          database: loizenaidb
-#          username: postgres
-#          password: 12345
-#          host: postgres
+      environment:
+         DATABASE: loizenaidb
+         USERNAME: postgres
+         PASSWORD: 12345
+         HOST: postgres
         ports:
             - "8080:8080"
-  frontend:
-        image: frontend:v5
-        container_name: frontend
-        stdin_open: true
-        environment:
-           target: "http://backends:8080"
-        ports:
-             - "3000:3000"
+#  frontend:
+#        image: frontend:v5
+#        container_name: frontend
+#        stdin_open: true
+#        environment:
+#           target: "http://backends:8080"
+#        ports:
+#             - "3000:3000"
